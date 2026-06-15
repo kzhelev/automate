@@ -10,8 +10,11 @@ import java.util.List;
 
 public class FullCheckRequest {
 
+    @JsonProperty("VIN_REQUEST")
     private VINRequest vinRequest;
+    @JsonProperty("TOLL_REQUEST")
     private TollRequest tollRequest;
+    @JsonProperty("TRAFFIC_FINES_REQUEST")
     private ObligationsRequest trafficFineRequest;
 
     public FullCheckRequest() {

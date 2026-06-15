@@ -46,7 +46,9 @@ public class ReportService {
             return new AbstractReportDto(e.getCode(), e.getCodeDescription(), request.getRequestType());
         }
 
-        AbstractReportEntity reportEntity = persistenceService.saveResult(result.toEntity(request));
+        AbstractReportEntity resultEntity = result.toEntity(request);
+
+        AbstractReportEntity reportEntity = persistenceService.saveResult(resultEntity);
 
         AbstractReportDto report = reportEntity.toReportDto();
 
